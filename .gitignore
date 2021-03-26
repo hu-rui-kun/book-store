@@ -25,3 +25,5 @@ target/
 *.jar
 *.war
 *.ear
+
+src/main/resources/application.properties
