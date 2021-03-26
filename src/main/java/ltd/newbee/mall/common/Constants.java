@@ -8,6 +8,11 @@
  */
 package ltd.newbee.mall.common;
 
+import org.springframework.util.ResourceUtils;
+
+import java.io.File;
+import java.io.FileNotFoundException;
+
 /**
  * @author 13
  * @qq交流群 796794009
@@ -16,8 +21,23 @@ package ltd.newbee.mall.common;
  * @apiNote 常量配置
  */
 public class Constants {
-    //public final static String FILE_UPLOAD_DIC = "/opt/image/upload/";//上传文件的默认url前缀，根据部署设置自行修改
-    public final static String FILE_UPLOAD_DIC = "D:\\upload\\";//上传文件的默认url前缀，根据部署设置自行修改
+
+    public static String FILE_UPLOAD_DIC = System.getProperty("user.dir")+"/src/main/resources/static/admin/upload/";//上传文件的默认url前缀，根据部署设置自行修改
+
+//    public static void main(String[] args) throws Exception {
+//        String path = ResourceUtils.getURL("classpath:").getPath()+"../../static/admin/upload/";
+//        path = System.getProperty("user.dir")+"src/main/resources/static/admin/upload/";
+//        System.err.println(path);
+//    }
+//
+//    static {
+//        try {
+//            FILE_UPLOAD_DIC = ResourceUtils.getURL("classpath:").getPath()+"static/admin/upload/";
+//        } catch (FileNotFoundException e) {
+//            e.printStackTrace();
+//        }
+//    }
+//    public final static String FILE_UPLOAD_DIC = "/upload";//上传文件的默认url前缀，根据部署设置自行修改
 
     public final static int INDEX_CAROUSEL_NUMBER = 5;//首页轮播图数量(可根据自身需求修改)
 
