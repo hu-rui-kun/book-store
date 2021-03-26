@@ -27,4 +27,3 @@ target/
 *.ear
 
 src/main/resources/application.properties
-*.properties
